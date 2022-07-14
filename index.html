@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+    <!--Bootstrap 5.0-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- W3 Schools-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <title>3dmfers</title>
+    <script>
+/*        window.onload = function() {
+            var temp=document.getElementById("body").innerHTML.toString();
+            document.getElementById("body").innerHTML="";
+            let person = prompt("Please enter authentication key", "");
+            if (person == "149149") {
+              document.getElementById("body").innerHTML=temp;
+            }
+            else
+            {
+                 alert("Wrong Key");
+            }
+          } */
+    
+    function reveal() 
+    {
+        var reveals = document.querySelectorAll(".reveal")
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+        
+            if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+            } else {
+            reveals[i].classList.remove("active");
+        }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    // To check the scroll position on page load
+
+    </script>
+</head>
+
+<body id="body">
+    <div>
+        <p class="banner">
+          <marquee truespeed="1">Dropping on March 27th</marquee>
+        </p>
+    </div>
+    
+    <!-- Langing Page-->
+    <div class="bg-pink">
+        <div class="container">
+            <div class="row mx-lg-5">
+                <nav class="navbar navbar-expand-lg sticky-top navbar-light w3-animate-opacity">
+                    <div class="container-fluid mx-lg-5">
+                        <div class="navbar-brand d-lg-none">3Dmfers</div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item mx-4">
+                                    <a href="#why">Why?</a>
+                                </li>
+                                <li class="nav-item mx-4">
+                                    <a href="#team">Team</a>
+                                </li>
+                                <li class="nav-item ms-4">
+                                    <a href="#distribution">Distribution</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mx-lg-5 d-none d-lg-block navbar-brand">3Dmfers</div>
+                        <button id="address-btn" class="wallet-btn d-none d-lg-block" onclick="Mint.connect()">connect wallet</button>
+                    </div>
+                </nav>
+            </div>
+            <div class="row mx-lg-5">
+                <div class="col-lg-6 ms-lg-5 my-5">
+                    <p class="title w3-animate-bottom"><span>3D</span>mfers</p>
+                    <p class="title-desc w3-animate-right">
+                    10000 3D rendered mfers, starting minting on the 27th of March.
+                    </p>
+                    <button id="address-btn" class="wallet-btn d-lg-none w3-animate-right" onclick="Mint.connect()">connect wallet</button>
+                    <button class="title-button align-items-sm-center w3-animate-left">Follow us on Twitter</button>
+                </div>
+            </div>
+        </div>
+        <div class="corner d-none d-lg-block">
+            <img class="flower w3-animate-zoom" src="./assets/Landing.svg" alt=""/>
+        </div>
+    </div>
+    <div class="bg-green">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8 section2">
+                    <div class="reveal">
+                        <h1 class="my-5">THE COLLECTION</h1>
+                    <p>
+                        Searching for the 3D version of your favourite mfer? Or are you
+                        looking for your first ever mfer?? Worry not, we are for everyone !!
+                    <div class="mf">One 3D mfer for every mfer.</div>
+                    <p class="roadmap"> No official roadmap, no official discord,
+                        only fucking vibes and memes!</p>
+                    <br>
+                    <p>
+                        Check out how this collection came into
+                        being!!
+                    </p>
+                    <button class="legend-btn my-5">The Legend of Memeroshi</button>
+                    </div>
+                    
+                    <img class='swirl1 d-none d-lg-block' src="./assets/Swirl 1.svg" alt="swirl-image">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img1.png" alt="img1">
+                </div>
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img2.png" alt="img2">
+                </div>
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img3.png" alt="img3">
+                </div>
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img4.png" alt="img4">
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img1.png" alt="img1">
+                </div>
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img2.png" alt="img2">
+                </div>
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img3.png" alt="img3">
+                </div>
+                <div class="col-lg-3 my-3 text-center">
+                    <img class="img-fluid" src="./assets/img4.png" alt="img4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-blue section3">
+        <div class="container reveal">
+            <div class="row text-center">
+                <h1>mint here</h1>
+            </div>
+            <div class="row m-5">
+                <div class="mint-grid">
+                    <img class="stroke1 d-none d-lg-block" height="250px" width="250px" src="./assets/Stroke 40.svg" alt=""/>
+                    <div class="mint-box">
+                      <div id="supply">0/10000</div>
+                      <p>minted</p>
+                      <div class="buttons-row">
+                        <div class="qty-btns">
+                          <button onclick="minus()">-</button>
+                          <p id="qty">1</p>
+                          <button onclick="add()">+</button>
+                        </div>
+                        <button id="wallet-btn2" class="wallet-btn" onclick="Mint.connect()">connect wallet</button>
+                        <button class="mint-btn" style="display: none;" onclick="Mint.mint()">Mint</button>
+                      </div>
+                    </div>
+                    <img class="stroke2" src="./assets/Stroke 20.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="why" class="bg-green section4">
+        <img class="vector4" src="./assets/Vector 4.svg" alt="vector4">
+        <div class="container reveal">
+            <div class="row">
+                <div class="col-lg-6 ms-3">
+                    <h1>Why 3D mfers?</h1>
+                    <p>Because we believe no other project has been able to embrace the life and culture of memes like mfers.</p>
+                    <p>Like sartoshi says,“you can state a roadmap that says where you will go, but you can also plant seeds and see
+                      where they grow”. 3D mfers has taken the seed that sartoshi has sown and we’re growing it into a full blown
+                      tree.</p>
+                    <p>Guess what?? This one is for all you motherfucking losers out there. All of you who’ve ever been rugged , got
+                      rekt buying tops or have become memes yourself , the 3D mfer community welcomes you in with open arms.</p>
+                </div>
+                <img class='stroke-16' src="./assets/Stroke 16.svg" alt="stroke16">
+                <div class="col mt-max">
+                    <picture class="">
+                        <div class="d-block">
+                            <img class='img-fluid' height="50%" width="50%" src="./assets/3.png" alt="image1">
+                            <img class='img-fluid' height="45%" width="45%"  src="./assets/2.png" alt="image2">
+                        </div>
+                        <div class="d-block">
+                            <img class='img-fluid' height="50%" width="50%" src="./assets/1.png" alt="image3">
+                            <img class='img-fluid' height="45%" width="45%" src="./assets/4.png" alt="image4">
+                        </div>  
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="team" class="bg-blue">
+        <div class="container reveal">
+            <div class="row section5 my-5">
+                <div class="col text-center">
+                    <img class="dialog-box float-end d-lg-none" src="./assets/Group 10846.svg" alt="component3">
+                    <img class="smiley" src="./assets/Component 2.svg" alt="component2">
+                </div>
+                <div class="col text-center">
+                    <h1>Team</h1>
+                        <img src="./assets/Component 1.svg" alt="component1">
+                    <p class="mt-5">Artist, idiot , illiquid jpeg trader and a living meme. There is a memeroshi in each and every on of you.
+                    </p>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <img class="dialog-box float-end" src="./assets/Group 10846.svg" alt="component3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="distribution" class="bg-yellow">
+        <img class="fill58 d-none d-lg-block" src="./assets/Fill 58.svg" alt="">
+        <img class="fill56 d-none d-lg-block"src="./assets/Fill 56.svg" alt="">
+        <img class="fill60 d-none d-lg-block" src="./assets/Fill 60.svg" alt="">
+        <div class="container">
+            <div class="row mb-5">
+                <h1 class="text-center my-3">Distribution</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col offset-lg-0 offset-md-3 offset-sm-1 rect1">
+                    <!-- <img  src="./assets/Rectangle 18.svg" alt="rect1"> -->
+                    <img class='ellipse1 image-fluid' src="./assets/Ellipse 12.svg" alt="Ellipse2">
+                    <h2 class="ms-5 m-top">10,000 exact replicas of mfers</h2>
+                    <p class="ms-5 mt-3">Each 3D mfer is an exact copy of your 2D mfer , down to every detail.</p>
+                </div>
+                <div class="col offset-lg-0 offset-md-3 offset-sm-1 rect2 mt-3">
+                    <!-- <img  src="./assets/Rectangle 18.svg" alt="rect1"> -->
+                    <img class='ellipse2 image-fluid' src="./assets/Ellipse 12.svg" alt="Ellipse2">
+                    <h2 class="ms-5 m-top">20 % of initial mint</h2>
+                    <p class="ms-5 mt-3">will be sent to the mfer community wallet. We reserve complete rights to throw away the rest on illiquid jpegs and more 3D mfers .</p>
+                </div>
+                <div class="col offset-lg-0 offset-md-3 offset-sm-1 rect3">
+                    <!-- <img  src="./assets/Rectangle 18.svg" alt="rect1"> -->
+                    <img class='ellipse3 image-fluid' src="./assets/Ellipse 12.svg" alt="Ellipse2">
+                    <h2 class="ms-5 m-top">A portion will be used to nurture and support </h2>
+                    <p class="ms-5 mt-3">memers, shitposters and all those who’ve sold their house to buy jpegs .</p>
+                </div>
+            </div>
+        </div>
+        <img class="stroke-28" src="./assets/Stroke 28.svg" alt="">
+    </div>
+    <div class="bg-blue">
+        <div class="container">
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-4 text-center fs-4">
+                    <h1>Perks</h1>
+                    <p class="text-dark">You have complete rights to a dumbass 3D mfer jpeg you idiot, what more can you ask for?
+                    </p>
+                </div>
+                <div class="col-lg-2 float-end">
+                    <img class="heart" src="./assets/Heart.svg" alt="heart">
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="bg-green">
+        <div class="container">
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-4 text-center">
+                    <h1>WEN ROADMAP?</h1>
+                    <div>
+                    <p>Scroll up and read again, you mfer!!</p>
+                    <img class="fill58-new" src="./assets/Fill 58-new.svg" alt="">
+                    <img class="fill60-new" src="./assets/Fill 60-new.svg" alt="">
+                    <img src="./assets/Fill 61.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-orange">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 text-center my-5 bottom-margin">
+                    <h1>Conclusion</h1>
+                    <p>We all mfers love u mfers & gm mfers we just getting started !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-pink">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 text-center my-5">
+                    <div class="footer-container" align="center">
+                        <div class="brand">3Dmfers</div>
+                        <div class="circle-container">
+                          <img class="circle" src="./assets/Ellipse 2.svg" alt="">
+                          <img class="circle" src="./assets/Ellipse 3.svg" alt="">
+                        </div>
+                        <p style="font-size: 24px;">2022 3Dmfer. All rights reserved.</p>
+                      </div>
+                </div>
+                <div class="col align-self-center">
+                    <img class="group-vector float-end" src="./assets/Group 10843.svg" alt="group">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
